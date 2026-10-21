@@ -1,0 +1,147 @@
+.explore-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.explore-page > main {
+  padding-bottom: 24px;
+}
+
+/* Área do fundo, incluindo a região atrás do header */
+.explore-background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: clamp(300px, 23.5vw, 360px);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Imagem encostada no topo, sem distorção */
+.explore-background img {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+}
+
+/* Transição suave entre a imagem e o fundo branco */
+.explore-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 15%) 0%,
+      rgb(255 255 255 / 10%) 65%,
+      rgb(255 255 255 / 55%) 85%,
+      #fff 100%
+    ),
+    linear-gradient(
+      to right,
+      #fff 0%,
+      #fff 35%,
+      rgb(255 255 255 / 95%) 45%,
+      rgb(255 255 255 / 65%) 58%,
+      rgb(255 255 255 / 25%) 75%,
+      transparent 100%
+    );
+}
+
+/* Conteúdo acima da imagem */
+.explore-page > header,
+.explore-page > main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Permite visualizar o fundo atrás do header */
+.explore-page > header {
+  background: transparent;
+}
+
+@media (max-width: 760px) {
+  .explore-background {
+    height: 340px;
+  }
+
+  .explore-background img {
+    right: -70px;
+  }
+
+  .explore-background::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgb(255 255 255 / 30%) 0%,
+        rgb(255 255 255 / 55%) 60%,
+        #fff 100%
+      ),
+      linear-gradient(
+        to right,
+        #fff 0%,
+        rgb(255 255 255 / 90%) 30%,
+        rgb(255 255 255 / 60%) 60%,
+        rgb(255 255 255 / 20%) 100%
+      );
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-background {
+    height: 380px;
+  }
+
+  .explore-background img {
+    right: -110px;
+  }
+}
+
+.destination-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.destination-layout__left,
+.destination-layout__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* O espaçamento agora é controlado pelo gap da coluna */
+.destination-layout__left > .travel-planning {
+  margin-top: auto;
+}
+
+.destination-layout__right > .travel-budget {
+  margin-top: auto;
+}
+
+@media (max-width: 760px) {
+  .destination-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .destination-layout__left > .travel-planning,
+  .destination-layout__right > .travel-budget {
+    margin-top: 0;
+  }
+}
+

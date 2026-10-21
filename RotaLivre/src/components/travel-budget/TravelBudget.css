@@ -1,0 +1,179 @@
+.travel-budget {
+    padding: 20px;
+    border: 1px solid #e0e6e8;
+    border-radius: 12px;
+    background: #fff;
+  }
+  
+  .travel-budget__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .travel-budget__heading h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #173e65;
+    font-size: 18px;
+  }
+  
+  .travel-budget__heading h2 svg {
+    flex-shrink: 0;
+    color: #087579;
+    width: 23px;
+    height: 23px;
+  }
+  
+  .travel-budget__heading > span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #627480;
+    font-size: 11px;
+  }
+  
+  .travel-budget__heading > span svg {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .travel-budget__conversion {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: end;
+    gap: 14px;
+  }
+  
+  .travel-budget__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+  
+  .travel-budget__field > span {
+    color: #526471;
+    font-size: 11px;
+  }
+  
+  .travel-budget__input,
+  .travel-budget__result {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid #d8e0e5;
+    border-radius: 6px;
+    font-size: 18px;
+  }
+  
+  .travel-budget__input {
+    gap: 6px;
+    color: #526471;
+  }
+  
+  .travel-budget__input:focus-within {
+    border-color: #087579;
+  }
+  
+  .travel-budget__input input {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+  }
+  
+  .travel-budget__input input::placeholder {
+    color: #8b9ba6;
+  }
+  
+  .travel-budget__result {
+    border-color: #c8e5e4;
+    background: #edf7f6;
+    color: #10494f;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  
+  .travel-budget__arrow {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 13px;
+    color: #285b60;
+  }
+  
+  .travel-budget__notice {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #f4f6f6;
+    color: #526471;
+  }
+  
+  .travel-budget__notice > svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .travel-budget__notice p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 480px) {
+    .travel-budget {
+      padding: 16px;
+    }
+  
+    .travel-budget__heading {
+      flex-wrap: wrap;
+    }
+  
+    .travel-budget__conversion {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  
+    .travel-budget__arrow {
+      justify-self: center;
+      margin: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  .travel-budget__field > label {
+    color: #526471;
+    font-size: 11px;
+}
+
+.travel-budget__select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d8e0e5;
+    border-radius: 6px;
+    background: #fff;
+    color: #173e65;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.travel-budget__select:focus-visible {
+    outline: 2px solid #087579;
+    outline-offset: 2px;
+}

@@ -1,0 +1,29 @@
+.destinations-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #123c33;
+    background: #fff;
+  }
+  
+  .destinations-main {
+    flex: 1;
+    padding-top: 22px;
+    padding-bottom: 40px;
+  }
+  
+  .destinations-breadcrumb {
+    margin: 0 0 24px;
+    color: #737777;
+    font-size: 13px;
+  }
+  
+  .destinations-breadcrumb a {
+    margin-right: 12px;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .destinations-breadcrumb a:hover {
+    text-decoration: underline;
+  }
