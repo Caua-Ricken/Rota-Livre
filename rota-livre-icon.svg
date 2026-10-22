@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo Rota Livre</title>
+  <desc id="desc">Sol dourado sobre montanhas verdes com um rio sinuoso em espaço transparente.</desc>
+  <rect width="256" height="256" rx="56" fill="#FFFFFF"/><g transform="translate(0 28)"><defs><mask id="river"><rect width="256" height="192" fill="white"/><path d="M64 128C81 119 99 119 115 126C133 134 141 142 164 141C181 140 199 135 219 140C197 139 180 149 161 153C143 157 129 151 112 149C96 147 80 151 73 155C88 153 104 155 115 159C123 162 131 167 148 169C124 174 96 170 73 168C55 166 39 164 27 159C48 164 65 164 81 161C92 158 97 154 91 149C84 143 70 140 64 128Z" fill="black"/></mask></defs>
+  <g mask="url(#river)">
+  <circle cx="153" cy="49" r="33" fill="#FFBE4B"/>
+  <path d="M20 143C27 128 35 106 44 94C49 87 56 88 61 98L78 132L66 160L32 160C18 160 14 154 20 143Z" fill="#148C8B"/>
+  <path d="M55 127C62 107 65 74 76 54C81 44 89 40 98 44C111 49 120 66 131 80C139 90 149 94 158 87L178 73C188 66 196 69 204 79C214 94 215 109 226 123L241 141C249 151 247 160 234 163L74 166C59 162 50 145 55 127Z" fill="#086B6C"/>
+  <path d="M75 56C83 49 93 55 100 68C111 89 119 108 140 111C128 118 114 114 103 103C91 91 83 72 75 56Z" fill="#0B8080"/>
+
+  <path d="M30 166C63 176 101 175 132 173C166 171 202 162 235 165C215 171 189 176 160 178C109 183 63 179 30 170Z" fill="#70B1AC"/>
+  </g>
+</g></svg>
+
