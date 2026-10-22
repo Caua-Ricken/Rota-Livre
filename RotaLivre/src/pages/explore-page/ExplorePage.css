@@ -145,3 +145,35 @@
   }
 }
 
+/* Tela inicial no computador */
+@media (min-width: 761px) and (min-height: 650px) {
+  .explore-page--inicio {
+    height: 100dvh;
+    min-height: 0;
+  }
+
+  .explore-page--inicio > header,
+  .explore-page--inicio > footer {
+    flex-shrink: 0;
+  }
+
+  .explore-page--inicio > main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 20px;
+  }
+
+  .explore-page--inicio .hero,
+  .explore-page--inicio .destination-search {
+    flex-shrink: 0;
+  }
+
+  .explore-page--inicio .destination-carousel {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+  }
+}

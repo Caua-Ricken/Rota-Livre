@@ -28,7 +28,7 @@ export default function ExplorePage() {
     }
 
     return (
-        <div className="explore-page">
+        <div className={`explore-page ${!resultado ? 'explore-page--inicio' : ''}`}>
             <div className="explore-background" aria-hidden="true">
                 <img src={lisbonBackground} alt="" />
             </div>

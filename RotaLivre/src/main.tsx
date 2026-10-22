@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
@@ -11,7 +11,7 @@ import ExplorePage from './pages/explore-page/ExplorePage.tsx'
 import NotFoundPage from './pages/not-found-page/NotFoundPage.tsx'
 import Destinations from './pages/destinations/Destinations.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <ExplorePage />,
