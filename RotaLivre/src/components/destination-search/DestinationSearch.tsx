@@ -9,6 +9,7 @@ import './DestinationSearch.css';
 
 interface DestinationSearchProps {
   onResult: (imagem: string, cidade: string, clima: ClimaAtual, viajantes: number, pais: string) => void;
+  onListaChange: (aberta: boolean) => void;
 }
 
 interface Cidade {
@@ -20,7 +21,7 @@ interface Cidade {
   longitude: number;
 }
 
-const DestinationSearch = ({ onResult }: DestinationSearchProps) => {
+const DestinationSearch = ({ onResult, onListaChange }: DestinationSearchProps) => {
   
   const [cidade, setCidade] = useState('');
   const [viajantes, setViajantes] = useState('1');
@@ -54,6 +55,7 @@ const DestinationSearch = ({ onResult }: DestinationSearchProps) => {
       }
 
       setResultado(primeirasCidades);
+      onListaChange(cidades.length > 0);
 
     } catch (error) {
       setErro(

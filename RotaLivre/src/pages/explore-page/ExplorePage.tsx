@@ -21,6 +21,7 @@ interface ResultadoCidade {
 }
 
 export default function ExplorePage() {
+    const [listaAberta, setListaAberta] = useState(false);
     const [resultado, setResultado] = useState<ResultadoCidade | null>(null);
 
     function receberResultado(imagem: string, cidade: string, clima: ClimaAtual, viajantes: number, pais: string) {
@@ -38,9 +39,9 @@ export default function ExplorePage() {
             <main className="page-container">
                 <Hero />
 
-                <DestinationSearch onResult={receberResultado} />
+                <DestinationSearch onResult={receberResultado} onListaChange={setListaAberta} />
 
-                {!resultado && <DestinationCarousel />}
+                {!resultado && !listaAberta && <DestinationCarousel />}
 
                 {resultado && (
                     <div className="destination-layout">
