@@ -4,7 +4,7 @@ Planejador de viagens desenvolvido com **React e TypeScript**, que permite explo
 
 ## 🖼️ Preview
 
-![Tela do projeto Rota Livre](./public/preview.png)
+![Tela do projeto Rota Livre](./RotaLivre/public/preview.png)
 
 🔗 **[Acesse o projeto](https://caua-ricken.github.io/Rota-Livre/)**
 
